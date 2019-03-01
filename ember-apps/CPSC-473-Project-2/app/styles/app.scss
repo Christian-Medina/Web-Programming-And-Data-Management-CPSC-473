@@ -1,0 +1,26 @@
+@import "bootstrap";
+
+.tutorial {
+  margin: auto;
+  display: block;
+  width: 60%;
+}
+
+.tutorialtext {
+  text-align: center;
+}
+
+.table-striped>tbody>tr:nth-child(odd)>td,
+.table-striped>tbody>tr:nth-child(odd)>th {
+   background-color: #EAF3F3; // Choose your own color here
+ }
+
+table tr {
+  counter-increment: rowNumber;
+}
+
+table tr td:first-child::before {
+  content: counter(rowNumber);
+  min-width: 2px;
+  margin-right: 1px;
+}
