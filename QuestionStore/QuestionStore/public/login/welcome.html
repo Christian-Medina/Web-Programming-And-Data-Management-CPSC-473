@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Welcome</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="stylesheets/welcome.css">
+  <link href="https://fonts.googleapis.com/css?family=Caveat|Open+Sans" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+</head>
+
+<body>
+  <header class="top-banner">
+    <ul>
+      <li class="company-name">
+        <h1>ABC LAW FIRM </h1>
+        <h2>Online Legal Law Firm Questions</h2>
+      </li>
+      <li><a href="../index.html"><span class="home">Home</span></a></li>
+      <li><a href="../teammember.html"><span class="about">About Us</span></a></li>
+      <li><a href="index.html"><span class="login">Login</span></a></li>
+    </ul>
+  </header>
+  <section>
+    <div class="container">
+      <h1></h1>
+      <button class="btn" id="logout-btn">Logout</button>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../dpd.js"></script>
+    <script type="text/javascript">
+      dpd.users.me(function(user) {
+        if (user) {
+          $(".container h1").text("Welcome, " + user.username + "!");
+        } else {
+          location.href = "/";
+        }
+      });
+
+      $('#logout-btn').click(function() {
+        dpd.users.logout(function(res, err) {
+          location.href = "/";
+        });
+      });
+    </script>
+    <h2>Messages:</h2>
+    <div class="panel panel-default">
+      <div class="panel-body">
+        <table style="width:100%" pending-questions="checklist">
+          <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Question Type</th>
+            <th>State</th>
+            <th></th>
+            <th></th>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <div id="questionDetails" style="visibility: hidden">
+      <h3><br>Message Details <button id="close">x</button></h3>
+      <div class="panel panel-default">
+        <div class="panel-body">
+          <h5>Question</h5>
+          <div class="panel panel-default">
+            <div class="panel-body">
+              <span class="question-title"></span>
+            </div>
+          </div>
+          <h5>Question Details</h5>
+          <div class="panel panel-default">
+            <div class="panel-body">
+              <span class="question-details"></span>
+            </div>
+          </div>
+          <button id="replyButton">Reply</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <h2> ® ABC LAW FIRM </h2>
+    <h3> We are non-profit organization to help you answer your legal questions </h3>
+    <h4> 12345 Lawyer St, Garden Grove, CA 92840</h4>
+    <h4> Phone: 1800-LAWYER</h4>
+  </footer>
+</body>
+<script type="text/javascript" src="scripts/remotedatastore.js"></script>
+<script type="text/javascript" src="scripts/populate.js"></script>
+<script type="text/javascript" src="scripts/main.js"></script>
+
+</html>

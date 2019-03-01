@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Login</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="stylesheets/login.css">
+	<link href="https://fonts.googleapis.com/css?family=Caveat|Open+Sans" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+	<style>
+		form :focus:required:invalid {
+			border-color: #a94442;
+		}
+	</style>
+</head>
+
+<body>
+	<header class="top-banner">
+		<ul>
+			<li class="company-name">
+				<h1>ABC LAW FIRM </h1>
+				<h2>Online Legal Law Firm Questions</h2>
+			</li>
+			<li><a href="../index.html"><span class="home">Home</span></a></li>
+			<li><a href="../teammember.html"><span class="about">About Us</span></a></li>
+			<li><a href="index.html"><span class="login">Login</span></a></li>
+		</ul>
+	</header>
+
+	<section>
+		<div class="cd">
+			<div class="panel-body">
+				<h1><center>
+					Login
+				</center></h1>
+				<form align="center">
+					<div class="form-group">
+						<label for="username"><b>Username:</b></label>
+						<input type="text" id="username" autofocus required placeholder="Enter Name" />
+					</div>
+					<div class="form-group">
+						<label for="password"><b>Password:</b></label>
+						<input type="password" id="password" autofocus required placeholder="Enter password" />
+					</div>
+					<button type="submit" class="btn btn-default">Login</button>
+					<!-- <a href="register.html" class="btn btn-link">sign up</a> -->
+				</form>
+			</div>
+		</div>
+
+	</section>
+
+
+
+	<footer>
+		<h2> ® ABC LAW FIRM </h2>
+		<h3> We are non-profit organization to help you answer your legal questions </h3>
+		<h4> 12345 Lawyer St, Garden Grove, CA 92840</h4>
+		<h4> Phone: 1800-LAWYER</h4>
+	</footer>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" charset="utf-8"></script>
+	<script type="text/javascript" src="../dpd.js"></script>
+	<script type="text/javascript">
+		dpd.users.me(function(user) {
+			if (user) {
+				location.href = "welcome.html";
+			}
+		});
+
+		$("form").submit(function() {
+			var username = $('#username').val();
+			var password = $('#password').val();
+
+			dpd.users.login({
+				username: username,
+				password: password
+			}, function(session, error) {
+				if (error) {
+					alert('You are not authorized. This page is for lawyer only.');
+				} else {
+					location.href = "welcome.html";
+				}
+			});
+
+			return false;
+		});
+	</script>
+</body>
+
+
+</html>

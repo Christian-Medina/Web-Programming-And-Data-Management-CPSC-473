@@ -1,0 +1,106 @@
+/*if we use css*/
+
+ul {
+  list-style-type: none;
+  overflow: hidden;
+  background-color: #2B2D42
+}
+
+li {
+  color: white;
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  padding: 50px 50px;
+  text-decoration: none;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+  background-image: url("https://ak1.picdn.net/shutterstock/videos/18751631/thumb/11.jpg");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+footer {
+  background-color: #2B2D42;
+  text-align: center;
+  margin: 0 auto;
+  padding: 30px;
+  max-width: 2000px;
+  overflow: auto;
+  padding: 30px;
+  color: white;
+}
+
+.company-name h1 {
+  font-family: 'Caeat', cursive;
+  font-size: 50px;
+  margin-bottom: 0;
+  margin-top: 0 auto;
+}
+
+.company-name h2 {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 15px;
+  margin-top: 0;
+}
+
+.home, .about, .login {
+  width: 50px;
+  font-size: 25px;
+  font-style: bold;
+  position: absolute;
+}
+
+.company-name {
+  position: relative;
+  left: auto;
+}
+
+.home {
+  right: 450px;
+}
+
+.about {
+  right: 320px;
+  word-spacing: normal;
+  white-space: nowrap;
+}
+
+.login {
+  right: 150px;
+}
+
+.top-banner {
+  overflow: auto;
+  margin: 0;
+}
+
+
+/*Form style*/
+
+.form-group {
+  width: 40%;
+  padding: 12px 20px;
+  display: block;
+  margin: auto;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+button[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 20px;
+  margin: auto;
+  border: none;
+  cursor: pointer;
+  width: 40%;
+  display: block;
+}

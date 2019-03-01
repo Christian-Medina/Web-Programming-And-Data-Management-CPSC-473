@@ -1,0 +1,138 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+}
+
+.TeamMembers h1 {
+  font-family: 'Caveat', cursive;
+  font-size: 50px;
+  color: black;
+}
+
+.TeamMembers h2 {
+  font-family: 'Caveat', cursive;
+  font-size: 40px;
+  margin-top: 0;
+}
+
+.profile-img {
+  width: 250px;
+  border-radius: 50%;
+  float: left;
+  margin-right: 30px;
+}
+
+.col-narrow {
+  width: 30%;
+  float: left;
+  min-height: 200px;
+}
+
+.col-wide {
+  width: 70%;
+  float: left;
+}
+
+
+/*header*/
+
+.top-banner {
+  margin: 0 auto;
+  padding-bottom: 0;
+}
+
+.top-banner ul {
+  list-style-type: none;
+  overflow: hidden;
+  background-color: #2B2D42
+}
+
+.top-banner li {
+  color: white;
+  float: left;
+}
+
+.top-banner li a {
+  display: block;
+  color: white;
+  padding: 50px 50px;
+  text-decoration: none;
+}
+
+.company-name h1 {
+  font-family: 'Caeat', cursive;
+  font-size: 50px;
+  margin-bottom: 0;
+  margin-top: 0 auto;
+}
+
+.company-name h2 {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 15px;
+  margin-top: 0;
+}
+
+.home, .about, .login {
+  width: 50px;
+  font-size: 25px;
+  font-style: bold;
+  position: absolute;
+}
+
+.company-name {
+  position: relative;
+  left: auto;
+}
+
+.home {
+  right: 450px;
+}
+
+.about {
+  right: 320px;
+  word-spacing: normal;
+  white-space: nowrap;
+}
+
+.login {
+  right: 150px;
+}
+
+
+/*Footer*/
+
+footer {
+  background: #2B2D42;
+  text-align: center;
+  color: white;
+}
+
+
+/**/
+
+.content-wrap {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 30px;
+  overflow: auto;
+}
+
+.TeamMembers {
+  /*border-color: black;*/
+  /*border-style: solid;*/
+  /*border-width: 1px;*/
+  background-color: #EDF2F4;
+  margin: 0;
+  padding: 60px;
+}
+
+.TeamMembers h1 {
+  font-family: 'Open Sans', sans-serif;
+  font-style: bold;
+  padding-bottom: 30px;
+  text-align: center;
+}
+
+.col-wide ul {
+  list-style-type: none;
+}

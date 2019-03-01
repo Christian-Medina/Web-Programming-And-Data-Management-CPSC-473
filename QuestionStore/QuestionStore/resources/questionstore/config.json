@@ -1,0 +1,53 @@
+{
+	"type": "Collection",
+	"properties": {
+		"emailCustomer": {
+			"name": "emailCustomer",
+			"type": "string",
+			"typeLabel": "string",
+			"required": false,
+			"id": "emailCustomer",
+			"order": 0
+		},
+		"customerName": {
+			"name": "customerName",
+			"type": "string",
+			"typeLabel": "string",
+			"required": false,
+			"id": "customerName",
+			"order": 1
+		},
+		"questionOrder": {
+			"name": "questionOrder",
+			"type": "string",
+			"typeLabel": "string",
+			"required": false,
+			"id": "questionOrder",
+			"order": 2
+		},
+		"questionDetail": {
+			"name": "questionDetail",
+			"type": "string",
+			"typeLabel": "string",
+			"required": false,
+			"id": "questionDetail",
+			"order": 3
+		},
+		"questionType": {
+			"name": "questionType",
+			"type": "string",
+			"typeLabel": "string",
+			"required": false,
+			"id": "questionType",
+			"order": 4
+		},
+		"state": {
+			"name": "state",
+			"type": "string",
+			"typeLabel": "string",
+			"required": false,
+			"id": "state",
+			"order": 5
+		}
+	}
+}
